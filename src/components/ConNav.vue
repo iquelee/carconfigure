@@ -1,8 +1,13 @@
 <template>
   <div class="aside bg-primary">
     <ul>
-      <li>
-        <router-link to="/doors" active-class="active" class="d-flex ai-center">
+      <li v-for="item in navList" :key="item.id">
+        <router-link :to="{
+          path: '/nav',
+          query: {
+            
+          }
+        }" active-class="active" class="d-flex ai-center">
           <svg class="icon fs-xxl text-primary" aria-hidden="true">
             <use xlink:href="#icon-home-fill"></use>
           </svg>
@@ -23,7 +28,16 @@
 
 <script>
 export default {
-  name: 'ConNav'
+  name: 'ConNav',
+  data () {
+    return {
+      navList: [
+        { id:'1', navTitle: 'Doors', iconLine: '#icon-home-fill' },
+        { id:'2', navTitle: 'HeadLights', iconLine: '#icon-home-fill' },
+        { id:'3', navTitle: 'Colors', iconLine: '#icon-home-fill' }
+      ]
+    }
+  }
 }
 </script>
 
