@@ -13,13 +13,9 @@ const routes = [
     component: Main,
     children: [
       {
-        path: 'doors',
-        name: 'Doors',
-        component: Doors
-      }, {
-        path: 'headlights',
-        name: 'HeadLights',
-        component: HeadLights
+        path: 'nav',
+        name: 'Nav',
+        component: Nav
       }
     ]
   }
