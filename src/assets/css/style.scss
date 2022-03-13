@@ -20,6 +20,11 @@ body {
 
 a {
     color: #999;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
 }
 
 //icon Symbol 引用通用css代码
@@ -176,26 +181,26 @@ $spacing-sizes:(0:0,1:0.25,2:0.5,3:1,4:1.5,5:3);
 }
 
 //btn
-.btn {
-    border:none;
-    border-radius: 0.1538rem;
-    font-size: map-get($font-sizes, 's') * $base-font-size;
-    padding: 0.2rem 0.6rem;
-}
+// .btn {
+//     border:none;
+//     border-radius: 0.1538rem;
+//     font-size: map-get($font-sizes, 's') * $base-font-size;
+//     padding: 0.2rem 0.6rem;
+// }
 
 //nav
-.nav {
-    .nav-item {
-        width: 100%;
-        color: map-get($colors ,"white");
-        &.active {
-            color:map-get($colors , "primary" );
-        };
-        &:hover {
-            background-color:map-get($colors , "black" )
-        }
-    }
-}
+// .nav {
+//     .nav-item {
+//         width: 100%;
+//         color: map-get($colors ,"white");
+//         &.active {
+//             color:map-get($colors , "primary" );
+//         };
+//         &:hover {
+//             background-color:map-get($colors , "black" )
+//         }
+//     }
+// }
 
 
 
