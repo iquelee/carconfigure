@@ -18,12 +18,12 @@ const routes = [
     component: Main,
     children: [
       {
-        path: '/doors',
+        path: 'doors',
         name: 'Doors',
         component: Doors,
         children: [
           {
-            path: './doorsTitle',
+            path: 'doorsTitle',
             name: 'doorsTitle',
             component: doorsTitle,
             props ($route) {
@@ -32,16 +32,16 @@ const routes = [
           }
         ]
       }, {
-        path: '/headlights',
+        path: 'headlights',
         name: 'HeadLights',
         component: HeadLights
       }, {
-        path: '/colors',
+        path: 'colors',
         name: 'Colors',
         component: Colors,
         children: [
           {
-            path: './colorsTitle',
+            path: 'colorsTitle',
             name: 'colorsTitle',
             component: colorsTitle,
             props ($route) {
@@ -50,11 +50,11 @@ const routes = [
           }
         ]
       }, {
-        path: '/visualpacks',
+        path: 'visualpacks',
         name: 'VisualPacks',
         component: VisualPacks
       }, {
-        path: '/wheels',
+        path: 'wheels',
         name: 'Wheels',
         component: Wheels
       }
