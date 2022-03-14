@@ -2,7 +2,18 @@
   <div class="hud d-flex flex-col jc-between">
     <ConHeader/>
     <ConNav/>
-    <router-view></router-view>
+    <div class="conFooter d-flex m-4">
+      <div class="container flex-1">
+        <router-view></router-view>
+      </div>
+      <div class="view bg-grey d-flex ai-center">
+        <div class="circle">
+          <i class="iconfont text-primary icon-home-fill fs-xxl"></i>
+        </div>
+        <p>Close 360</p>
+        <i class="iconfont text-primary icon-home-fill fs-xxl"></i>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -21,5 +32,13 @@ export default {
 <style>
   .hud {
     height: 100vh;
+  }
+  .conFooter {
+    height: 80px;
+  }
+  .view {
+    display: block;
+    border-radius: 20px;
+    margin: 20px 0;
   }
 </style>

@@ -39,8 +39,8 @@ export default {
 .circle {
   display: block;
   border-radius: 50%;
-  height: 30px;
-  width: 30px;
+  height: 40px;
+  width: 40px;
   margin: 0;
 }
 </style>

@@ -3,7 +3,7 @@
     <ul class="my-4">
       <li v-for="item in navList" :key="item.id">
         <router-link :to="'/' + item.navTitle" class="d-flex ai-center">
-          <i class="iconfont fs-xxl mx-3 my-3" :class="item.iconName"></i>
+          <i class="iconfont fs-xxl my-3" :class="item.iconName"></i>
           <div class="menuTitle">{{ item.navTitle }}</div>
         </router-link>
       </li>
@@ -34,12 +34,24 @@ export default {
     border-radius: 0 36px 36px 0;
   }
   .iconfont {
+    margin-left: 10px;
+    margin-right: 10px;
     z-index: 999;
   }
   .menuTitle {
     display: none;
   }
   .router-link-active {
+    .menuTitle {
+      display: block;
+      border-radius: 0 36px 36px 0;
+      background-color: rgba(255, 255, 255, 0.8);
+      margin-left: -50px;
+      padding: 13px;
+      padding-left: 64px;
+    }
+  }
+  li:hover {
     .menuTitle {
       display: block;
       border-radius: 0 36px 36px 0;

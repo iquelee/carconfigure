@@ -1,14 +1,12 @@
 <template>
-  <div class="conHeader d-flex">
+  <div class="conHeader d-flex m-4">
     <div class="carInfo flex-1">
-      <p class="text-dark fs-xxl">PORSCHE</p>
-      <p class="text-grey fs-m">Porsche Carrera GT | Michael Mauer</p>
+      <p class="text-dark fs-xxl fw-6">PORSCHE</p>
+      <p class="text-grey fs-m mt-2">Porsche Carrera GT | Michael Mauer</p>
     </div>
     <div class="homeIcon">
-      <a href="www.baidu.com">
-        <svg class="icon fs-xxl text-primary" aria-hidden="true">
-          <use xlink:href="#icon-home-fill"></use>
-        </svg>
+      <a href="../views/main.vue">
+        <i class="iconfont text-primary icon-home-fill fs-xxl"></i>
       </a>
     </div>
   </div>
