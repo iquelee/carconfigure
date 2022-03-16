@@ -6,12 +6,19 @@
       <div class="container flex-1">
         <router-view></router-view>
       </div>
-      <div class="view bg-grey d-flex ai-center">
+      <!-- <div class="view bg-grey d-flex ai-center">
         <div class="circle">
           <i class="iconfont text-primary icon-home-fill fs-xxl"></i>
         </div>
         <p>Close 360</p>
         <i class="iconfont text-primary icon-home-fill fs-xxl"></i>
+      </div> -->
+      <div class="view">
+        <el-switch
+          v-model="value"
+          active-color="#13ce66"
+          inactive-color="#ff4949">
+        </el-switch>
       </div>
     </div>
   </div>
@@ -22,6 +29,11 @@ import ConNav from '../components/ConNav.vue'
 import ConHeader from '../components/ConHeader.vue'
 export default {
   name: 'Main',
+  data () {
+    return {
+      value: true
+    }
+  },
   components: {
     ConNav,
     ConHeader
