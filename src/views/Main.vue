@@ -6,18 +6,12 @@
       <div class="container flex-1">
         <router-view></router-view>
       </div>
-      <!-- <div class="view bg-grey d-flex ai-center">
-        <div class="circle">
-          <i class="iconfont text-primary icon-home-fill fs-xxl"></i>
-        </div>
-        <p>Close 360</p>
-        <i class="iconfont text-primary icon-home-fill fs-xxl"></i>
-      </div> -->
       <div class="view">
         <el-switch
-          v-model="value"
-          active-color="#13ce66"
-          inactive-color="#ff4949">
+          v-model="value1"
+          active-text="Open360"
+          inactive-text="Close360"
+          >
         </el-switch>
       </div>
     </div>
@@ -31,7 +25,8 @@ export default {
   name: 'Main',
   data () {
     return {
-      value: true
+      value1: true,
+      value2: true
     }
   },
   components: {
@@ -41,16 +36,31 @@ export default {
 }
 </script>
 
-<style>
+<style lang='scss' scoped>
   .hud {
     height: 100vh;
   }
   .conFooter {
     height: 80px;
   }
-  .view {
-    display: block;
-    border-radius: 20px;
-    margin: 20px 0;
+  .el-switch {
+    ::v-deep .el-switch__core {
+      width: 160px !important;
+      height: 40px;
+      border-radius: 20px;
+      &::after {
+        width: 32px;
+        height: 32px;
+        top: 3px;
+        left: 4px;
+      }
+    }
+  }
+  .el-switch.is-checked {
+    ::v-deep .el-switch__core {
+      &::after {
+        margin-left: -36px;
+      }
+    }
   }
 </style>
