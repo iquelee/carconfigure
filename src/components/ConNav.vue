@@ -17,11 +17,11 @@ export default {
   data () {
     return {
       navList: [
-        { id: '1', navTitle: 'Doors', iconName: 'icon-home-fill' },
-        { id: '2', navTitle: 'HeadLights', iconName: 'icon-home-fill' },
-        { id: '3', navTitle: 'Colors', iconName: 'icon-home-fill' },
-        { id: '4', navTitle: 'VisualPacks', iconName: 'icon-home-fill' },
-        { id: '5', navTitle: 'Wheels', iconName: 'icon-home-fill' }
+        { id: '1', navTitle: 'doors', iconName: 'icon-home-fill' },
+        { id: '2', navTitle: 'headLights', iconName: 'icon-home-fill' },
+        { id: '3', navTitle: 'colors', iconName: 'icon-home-fill' },
+        { id: '4', navTitle: 'visualPacks', iconName: 'icon-home-fill' },
+        { id: '5', navTitle: 'wheels', iconName: 'icon-home-fill' }
       ]
     }
   }
