@@ -32,6 +32,7 @@ export default {
   .aside {
     width: 48px;
     border-radius: 0 36px 36px 0;
+    box-shadow: 0 0 6px #18bcbc;
   }
   .iconfont {
     margin-left: 10px;

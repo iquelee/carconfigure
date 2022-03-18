@@ -42,6 +42,5 @@ export default {
     border-radius: 50%;
     height: 40px;
     width: 40px;
-    box-shadow: 0 0 6px #f00;
   }
 </style>

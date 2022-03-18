@@ -5,7 +5,7 @@
       <p class="text-grey fs-m mt-2">Porsche Carrera GT | Michael Mauer</p>
     </div>
     <div class="homeIcon">
-      <a href="../views/main.vue">
+      <a href="/">
         <i class="iconfont text-primary icon-home-fill fs-xxl"></i>
       </a>
     </div>
