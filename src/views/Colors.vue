@@ -1,12 +1,14 @@
 <template>
   <div>
+    <router-view class="d-flex jc-center mb-3"></router-view>
     <ul class="d-flex">
-      <li v-for="item in colorsList" :key="item.id">
+      <li v-for="item in colorsList" :key="item.id" class="mx-2">
         <router-link
           :to="{
-            name: 'colorsTitle',
+            name: 'ColorsTitle',
             query: {
-              colorsTitle: item.colorsTitle,
+              id: item.id,
+              colorsTitle: item.colorsTitle
             }
           }"
         >
@@ -14,7 +16,6 @@
         </router-link>
       </li>
     </ul>
-    <router-view></router-view>
   </div>
 </template>
 
@@ -35,12 +36,12 @@ export default {
 }
 </script>
 
-<style>
-.circle {
-  display: block;
-  border-radius: 50%;
-  height: 40px;
-  width: 40px;
-  margin: 0;
-}
+<style lang="scss" scoped>
+  .circle {
+    display: block;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    box-shadow: 0 0 6px #f00;
+  }
 </style>

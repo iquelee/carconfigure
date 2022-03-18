@@ -4,7 +4,7 @@
       <li v-for="item in doorsList" :key="item.id">
         <router-link
           :to="{
-            name: 'doorsTitle',
+            name: 'DoorsTitle',
             query: {
               doorsTitle: item.doorsTitle,
             }

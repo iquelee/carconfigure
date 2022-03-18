@@ -3,10 +3,10 @@
     <ConHeader/>
     <ConNav/>
     <div class="conFooter d-flex m-4">
-      <div class="container flex-1">
+      <div class="container flex-1 d-flex jc-center ai-end mb-4">
         <router-view></router-view>
       </div>
-      <div class="view">
+      <div class="view d-flex jc-center ai-end mb-4">
         <el-switch
           v-model="value1"
           active-text="Open360"
@@ -41,11 +41,11 @@ export default {
     height: 100vh;
   }
   .conFooter {
-    height: 80px;
+    height: 120px;
   }
   .el-switch {
     ::v-deep .el-switch__core {
-      width: 160px !important;
+      width: 100px !important;
       height: 40px;
       border-radius: 20px;
       &::after {
@@ -57,10 +57,14 @@ export default {
     }
   }
   .el-switch.is-checked {
+    height: 40px;
     ::v-deep .el-switch__core {
       &::after {
         margin-left: -36px;
       }
     }
+  }
+  .container {
+    margin-left: 300px;
   }
 </style>

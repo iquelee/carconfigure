@@ -6,8 +6,8 @@ import HeadLights from '../views/HeadLights'
 import Colors from '../views/Colors'
 import VisualPacks from '../views/VisualPacks'
 import Wheels from '../views/Wheels'
-import colorsTitle from '../views/colorsTitle'
-import doorsTitle from '../views/doorsTitle'
+import ColorsTitle from '../views/ColorsTitle'
+import DoorsTitle from '../views/DoorsTitle'
 
 Vue.use(VueRouter)
 
@@ -15,6 +15,7 @@ const routes = [
   {
     path: '/',
     name: 'Main',
+    redirect: { name: 'Colors' },
     component: Main,
     children: [
       {
@@ -24,33 +25,34 @@ const routes = [
         children: [
           {
             path: 'doorsTitle',
-            name: 'doorsTitle',
-            component: doorsTitle,
+            name: 'DoorsTitle',
+            component: DoorsTitle,
             props ($route) {
               return { doorsTitle: $route.query.doorsTitle }
             }
           }
         ]
       }, {
-        path: 'headlights',
+        path: 'headLights',
         name: 'HeadLights',
         component: HeadLights
       }, {
         path: 'colors',
         name: 'Colors',
+        redirect: { name: 'ColorsTitle', query: { id: 1, colorsTitle: 'Red' } },
         component: Colors,
         children: [
           {
             path: 'colorsTitle',
-            name: 'colorsTitle',
-            component: colorsTitle,
+            name: 'ColorsTitle',
+            component: ColorsTitle,
             props ($route) {
-              return { colorsTitle: $route.query.colorsTitle }
+              return { id: $route.query.id, colorsTitle: $route.query.colorsTitle }
             }
           }
         ]
       }, {
-        path: 'visualpacks',
+        path: 'visualPacks',
         name: 'VisualPacks',
         component: VisualPacks
       }, {

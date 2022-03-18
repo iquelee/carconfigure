@@ -4,7 +4,7 @@
       <li v-for="item in navList" :key="item.id">
         <router-link :to="'/' + item.navTitle" class="d-flex ai-center">
           <i class="iconfont fs-xxl my-3" :class="item.iconName"></i>
-          <div class="menuTitle">{{ item.navTitle }}</div>
+          <div class="menuTitle text-grey fs-m">{{ item.navTitle }}</div>
         </router-link>
       </li>
     </ul>
@@ -28,7 +28,7 @@ export default {
 }
 </script>
 
-<style lang='scss'>
+<style lang='scss' scoped>
   .aside {
     width: 48px;
     border-radius: 0 36px 36px 0;
@@ -37,11 +37,15 @@ export default {
     margin-left: 10px;
     margin-right: 10px;
     z-index: 999;
+    color: #ffffff;
   }
   .menuTitle {
     display: none;
   }
   .router-link-active {
+    .iconfont {
+      color: #18bcbc;
+    }
     .menuTitle {
       display: block;
       border-radius: 0 36px 36px 0;
@@ -52,6 +56,9 @@ export default {
     }
   }
   li:hover {
+    .iconfont {
+      color: #18bcbc;
+    }
     .menuTitle {
       display: block;
       border-radius: 0 36px 36px 0;
