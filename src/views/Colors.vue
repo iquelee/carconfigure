@@ -1,8 +1,8 @@
 <template>
   <div>
     <router-view class="d-flex jc-center mb-3"></router-view>
-    <ul class="d-flex">
-      <li v-for="item in colorsList" :key="item.id" class="mx-2">
+    <ul class="d-flex ai-center">
+      <li v-for="item in colorsList" :key="item.id">
         <router-link
           :to="{
             name: 'ColorsTitle',
@@ -42,5 +42,23 @@ export default {
     border-radius: 50%;
     height: 40px;
     width: 40px;
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+  .router-link-exact-active {
+    .circle {
+      border: 4px solid rgba($color: rgb(0, 0, 0), $alpha: 0.4);
+      box-sizing: content-box;
+      margin-left: 8px;
+      margin-right: 8px;
+    }
+  }
+  li:hover {
+    .circle {
+      border: 4px solid rgba($color: rgb(0, 0, 0), $alpha: 0.4);
+      box-sizing: content-box;
+      margin-left: 8px;
+      margin-right: 8px;
+    }
   }
 </style>
