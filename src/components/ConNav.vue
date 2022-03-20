@@ -31,6 +31,8 @@ export default {
 <style lang='scss' scoped>
   .aside {
     width: 48px;
+    height: 240px;
+    margin-top: 160px;
     border-radius: 0 36px 36px 0;
     box-shadow: 0 0 6px #18bcbc;
   }
@@ -51,7 +53,7 @@ export default {
       display: block;
       border-radius: 0 36px 36px 0;
       background-color: rgba(255, 255, 255, 0.8);
-      margin-left: -50px;
+      margin-left: -44px;
       padding: 13px;
       padding-left: 64px;
     }
