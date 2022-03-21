@@ -32,7 +32,6 @@ export default {
   .aside {
     width: 48px;
     height: 240px;
-    margin-top: 160px;
     border-radius: 0 36px 36px 0;
     box-shadow: 0 0 6px #18bcbc;
   }

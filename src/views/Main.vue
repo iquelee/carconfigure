@@ -2,11 +2,9 @@
   <div class="hud">
     <ConHeader/>
     <div class="container d-flex mr-4 my-4">
-      <ConNav class="d-flex"></ConNav>
-      <div class="main flex-1 d-flex jc-center mb-4">
-          <router-view></router-view>
-      </div>
-      <div class="view d-flex jc-center ai-end mb-5">
+      <ConNav class="nav"></ConNav>
+      <ConMain></ConMain>
+      <div class="view d-flex jc-center">
           <el-switch
             v-model="value1"
             active-text="Open360"
@@ -20,6 +18,7 @@
 
 <script>
 import ConNav from '../components/ConNav.vue'
+import ConMain from '../components/ConMain.vue'
 import ConHeader from '../components/ConHeader.vue'
 export default {
   name: 'Main',
@@ -31,6 +30,7 @@ export default {
   },
   components: {
     ConNav,
+    ConMain,
     ConHeader
   }
 }
@@ -63,10 +63,13 @@ export default {
     // 高度缩小，使鼠标穿透
     height: 1px;
   }
+  .nav {
+    margin-top: 20vh;
+  }
   .main {
-    margin-top: 80vh;
+    margin-top: 70vh;
   }
   .view {
-    margin-top: 87vh;
+    margin-top: 77vh;
   }
 </style>
