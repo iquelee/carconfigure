@@ -1,25 +1,24 @@
 <template>
-  <div class="hud d-flex flex-col jc-between">
+  <div class="hud">
     <ConHeader/>
-    <ConNav/>
-    <div class="conFooter d-flex m-4">
-      <div class="container flex-1 d-flex jc-center ai-end mb-4">
-        <router-view></router-view>
-      </div>
-      <div class="view d-flex jc-center ai-end mb-4">
-        <el-switch
-          v-model="value1"
-          active-text="Open360"
-          inactive-text="Close360"
-          >
-        </el-switch>
-      </div>
+    <div class="container d-flex mr-4 my-4">
+      <ConNav class="nav"></ConNav>
+      <ConMain></ConMain>
+      <div class="view d-flex jc-center">
+          <el-switch
+            v-model="value1"
+            active-text="Open360"
+            inactive-text="Close360"
+            >
+          </el-switch>
+        </div>
     </div>
   </div>
 </template>
 
 <script>
 import ConNav from '../components/ConNav.vue'
+import ConMain from '../components/ConMain.vue'
 import ConHeader from '../components/ConHeader.vue'
 export default {
   name: 'Main',
@@ -31,40 +30,46 @@ export default {
   },
   components: {
     ConNav,
+    ConMain,
     ConHeader
   }
 }
 </script>
 
 <style lang='scss' scoped>
-  .hud {
-    height: 100vh;
-  }
-  .conFooter {
-    height: 120px;
-  }
   .el-switch {
+    // 隐藏插入光标
+    caret-color: transparent;
     ::v-deep .el-switch__core {
-      width: 100px !important;
-      height: 40px;
-      border-radius: 20px;
+      width: 64px !important;
+      height: 32px;
+      border-radius: 16px;
       &::after {
-        width: 32px;
-        height: 32px;
+        width: 24px;
+        height: 24px;
         top: 3px;
         left: 4px;
       }
     }
   }
   .el-switch.is-checked {
-    height: 40px;
     ::v-deep .el-switch__core {
       &::after {
-        margin-left: -36px;
+        margin-left: -28px;
       }
     }
   }
   .container {
-    margin-left: 300px;
+    // 高度缩小，使鼠标穿透
+    height: 1px;
+  }
+  .nav {
+    margin-top: 20vh;
+  }
+  .main {
+    margin-top: 70vh;
+  }
+  .view {
+    margin-top: 77vh;
   }
 </style>
